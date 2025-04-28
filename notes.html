@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDICT-HOME Thesis Defense Speaker Notes</title>
+    <style>
+        :root {
+            --chakra-blue-500: #3182ce;
+            --chakra-blue-600: #2b6cb0;
+            --chakra-blue-50: #ebf8ff;
+            --chakra-gray-50: #f7fafc;
+            --chakra-gray-100: #edf2f7;
+            --chakra-gray-200: #e2e8f0;
+            --chakra-gray-700: #2d3748;
+            --chakra-gray-800: #1a202c;
+            --chakra-green-50: #f0fff4;
+            --chakra-green-500: #38a169;
+            --chakra-purple-50: #faf5ff;
+            --chakra-purple-500: #805ad5;
+            --chakra-orange-50: #fffaf0;
+            --chakra-orange-500: #dd6b20;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: var(--chakra-gray-800);
+            background-color: var(--chakra-gray-50);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: var(--chakra-blue-600);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .slide-section {
+            margin-bottom: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .slide-header {
+            display: flex;
+            align-items: center;
+            background-color: var(--chakra-gray-100);
+            padding: 12px 20px;
+            border-left: 5px solid var(--chakra-blue-500);
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .slide-number {
+            background-color: var(--chakra-blue-500);
+            color: white;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .slide-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--chakra-gray-700);
+        }
+        
+        .slide-content {
+            padding: 20px;
+            background-color: white;
+            border: 1px solid var(--chakra-gray-200);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .tip-box {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: var(--chakra-blue-50);
+            border-left: 4px solid var(--chakra-blue-500);
+        }
+        
+        .tip-title {
+            font-weight: 600;
+            color: var(--chakra-blue-600);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tip-title::before {
+            content: "💡";
+            margin-right: 8px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--chakra-blue-600);
+            margin: 25px 0 15px;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            color: var(--chakra-gray-700);
+            margin: 20px 0 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .emphasis {
+            font-weight: 600;
+            color: var(--chakra-blue-600);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--chakra-gray-100);
+            border-top: 1px solid var(--chakra-gray-200);
+            color: var(--chakra-gray-700);
+            font-size: 0.9rem;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .slide-section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PREDICT-HOME</h1>
+            <p>An Explainable Hybrid Deep Learning System for Adaptive Domestic Energy Forecasting</p>
+            <p><em>Thesis Defense Speaker Notes</em></p>
+        </div>
+        
+        <div class="content">
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">1</div>
+                    <div class="slide-title">Title Slide - PREDICT-HOME</div>
+                </div>
+                <div class="slide-content">
+                    <p>Good afternoon, everyone. Thank you all for being here today. I'm honored to present my thesis defense on PREDICT-HOME, which stands for "An Explainable Hybrid Deep Learning System for Adaptive Domestic Energy Forecasting."</p>
+                    
+                    <p>This research sits at the intersection of machine learning, energy management, and human-computer interaction. The core challenge I've addressed is how to create energy forecasting systems that are not only accurate but also transparent and adaptable to changing household behaviors.</p>
+                    
+                    <p>Before I begin, I'd like to acknowledge my supervisors [mention names] for their guidance throughout this research journey, and [mention any funding bodies or collaborators] for their support.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Make eye contact with the audience and pause slightly after the acknowledgments to establish rapport.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">2</div>
+                    <div class="slide-title">Presentation Overview</div>
+                </div>
+                <div class="slide-content">
+                    <p>Let me walk you through what I'll cover today:</p>
+                    
+                    <p>First, I'll introduce the topic by explaining the societal context that makes this research necessary. I'll discuss the global energy challenges we face and the specific engineering problems that need solving in household energy forecasting.</p>
+                    
+                    <p>Second, I'll evaluate the existing literature in this field. We'll look at current approaches to energy forecasting—from statistical methods to advanced deep learning—and analyze their limitations, which my research aims to address.</p>
+                    
+                    <p>Finally, I'll present my project plan in detail. This includes the vision and objectives of PREDICT-HOME, the methodology I've developed, the timeline for implementation, and the expected outcomes and impact of this work.</p>
+                    
+                    <p>This structure will give you a comprehensive understanding of both the problem space and my proposed solution. If you have questions at any point, please feel free to note them down, and we'll have time for a detailed Q&A session at the end.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Use hand gestures to emphasize the three main sections of the presentation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">3</div>
+                    <div class="slide-title">The Global Energy Challenge</div>
+                </div>
+                <div class="slide-content">
+                    <p>Let's start by understanding why domestic energy forecasting matters in the broader context of global energy challenges.</p>
+                    
+                    <p>Residential energy consumption represents <span class="emphasis">27%</span> of global energy usage—that's more than a quarter of all energy consumed worldwide. This makes it a critical sector for optimization and efficiency improvements.</p>
+                    
+                    <p>The widespread deployment of smart meters in homes across developed countries has created an unprecedented opportunity. These devices generate detailed energy consumption data every 30 minutes or even more frequently, creating rich datasets that were simply not available to researchers a decade ago.</p>
+                    
+                    <p>At the same time, we're experiencing significant energy price volatility, which has increased by <span class="emphasis">45%</span> since 2018. This volatility affects both consumers who face unpredictable bills and utilities that must manage fluctuating demand.</p>
+                    
+                    <p>These factors combine to create an urgent need for better demand forecasting and management systems. If we can accurately predict when and how much energy households will use, we can optimize everything from individual consumption patterns to grid-level resource allocation.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Emphasize the "27%" and "45%" statistics with vocal inflection. Pause after mentioning the smart meter opportunity to let the significance sink in.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">4</div>
+                    <div class="slide-title">Need for Intelligent Energy Forecast</div>
+                </div>
+                <div class="slide-content">
+                    <p>The need for intelligent energy forecasting can be understood through three key impact areas:</p>
+                    
+                    <h3>Economic Impact</h3>
+                    <p>From an economic perspective, the average UK household spends £1,138 annually on electricity. Our research indicates that through optimized consumption based on accurate forecasting, households could save between 12-18% on these costs. That's about £136-£205 per year per household—a significant saving, especially for lower-income families.</p>
+                    
+                    <h3>Environmental Impact</h3>
+                    <p>The environmental impact is equally compelling. Enhanced demand-side flexibility—the ability to shift energy usage to optimal times—could reduce carbon emissions by 25 million tonnes annually by 2035. This reduction comes from both more efficient energy use and better integration of renewable energy sources, which often have variable output dependent on weather conditions.</p>
+                    
+                    <h3>Grid Resilience</h3>
+                    <p>For grid resilience, improved demand forecasting could reduce the required operating reserve—essentially backup power capacity—by up to 30%. This means fewer power plants need to be kept on standby, reducing costs and emissions. It also enhances stability during peak demand periods, when the grid is most vulnerable to failures.</p>
+                    
+                    <p>These three areas—economic benefits, environmental sustainability, and grid resilience—together demonstrate the substantial value proposition of advanced energy forecasting. This isn't just an academic exercise; it has real-world implications for households, utilities, and our planet.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Use three-finger gesture when mentioning the three key impact areas. Take a moment to connect the economic, environmental, and resilience benefits as a cohesive value proposition.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">5-6</div>
+                    <div class="slide-title">Engineering Challenges in Energy Forecasting</div>
+                </div>
+                <div class="slide-content">
+                    <p>Developing effective energy forecasting systems faces three significant engineering challenges:</p>
+                    
+                    <h3>1. The Black Box Problem</h3>
+                    <p>The first challenge is what I call "The Black Box Problem." Deep learning models can provide impressive accuracy in predictions, but they typically operate as black boxes, offering little insight into how they arrive at their conclusions. This lack of transparency is problematic because our research shows that <span class="emphasis">67%</span> of consumers are hesitant to use AI systems they don't understand. For adoption in real households, people need to trust and comprehend the system's recommendations.</p>
+                    
+                    <h3>2. Adaptation to Changing Behaviors</h3>
+                    <p>The second challenge concerns adaptation to changing behaviors. Household consumption patterns aren't static—they can change dramatically by up to <span class="emphasis">30%</span> following major life events like having a child, changing jobs, or purchasing new appliances. Traditional static models require frequent complete retraining to capture these changes, which is computationally expensive and often impractical in real-world applications.</p>
+                    
+                    <h3>3. Generalization Across Households</h3>
+                    <p>The third challenge involves generalization across households. Models trained on specific households typically perform poorly when applied to others with different characteristics. Each home has unique appliances, occupancy patterns, and user behaviors. This means we need sophisticated transfer learning approaches that can adapt knowledge from one context to another while preserving accuracy.</p>
+                    
+                    <p>These three challenges—lack of transparency, limited adaptability, and poor generalization—form the core technical problems my research addresses. By solving these issues, PREDICT-HOME aims to create energy forecasting systems that are not only accurate but also practical for real-world deployment in diverse households.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>When explaining each challenge, use specific examples that non-technical audience members can relate to. For the black box problem, you might mimic looking into an opaque container. For adaptation, consider a gesture showing transformation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">7</div>
+                    <div class="slide-title">Evolution of Energy Forecasting Methods</div>
+                </div>
+                <div class="slide-content">
+                    <p>To understand where my research fits in the broader landscape, let's examine the evolution of energy forecasting methods and their relative strengths and weaknesses.</p>
+                    
+                    <h3>Statistical Methods</h3>
+                    <p>Traditional statistical methods like ARIMA (Autoregressive Integrated Moving Average) and Exponential Smoothing achieve a Mean Absolute Percentage Error (MAPE) of 3-6%. These methods offer high interpretability—you can easily follow the mathematical logic—but they have low adaptability to changing patterns and can miss complex, non-linear relationships in the data.</p>
+                    
+                    <h3>Machine Learning Approaches</h3>
+                    <p>Machine learning approaches like Random Forests and Support Vector Regression (SVR) show a 15-20% improvement over statistical methods. They offer medium interpretability—we can understand feature importance but not the full decision process—and medium adaptability to changing conditions.</p>
+                    
+                    <h3>Deep Learning Methods</h3>
+                    <p>Deep learning methods, particularly Long Short-Term Memory (LSTM) networks and Convolutional Neural Networks (CNNs), offer up to 30% improvement in accuracy over statistical methods. However, they typically have low interpretability—functioning as black boxes—while providing high adaptability to changing consumption patterns.</p>
+                    
+                    <h3>Hybrid Models</h3>
+                    <p>Hybrid models, which combine different approaches, generally show the best performance in terms of accuracy. However, like pure deep learning models, they still struggle with interpretability.</p>
+                    
+                    <p>The key observation here is that most approaches sacrifice either accuracy or interpretability. This trade-off represents a significant gap in the field that my research directly addresses. PREDICT-HOME aims to maintain the high accuracy of deep learning while significantly improving interpretability.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Consider drawing an imaginary graph in the air showing the inverse relationship between accuracy and interpretability as you describe the evolution of methods. This visual aid helps the audience grasp the key trade-off.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">8</div>
+                    <div class="slide-title">Critical Gap: Explainability in Energy Forecasting</div>
+                </div>
+                <div class="slide-content">
+                    <p>Diving deeper into the explainability aspect, let's examine the current approaches and their limitations.</p>
+                    
+                    <h3>Feature Importance Methods</h3>
+                    <p>Feature importance methods like SHAP (SHapley Additive exPlanations) and LIME (Local Interpretable Model-agnostic Explanations) provide post-hoc explanations of model predictions. While useful, these explanations come after the prediction is made, not during the model's decision process. This limits their actionability—the ability for users to act on the explanations to modify their behavior.</p>
+                    
+                    <h3>Attention Mechanisms</h3>
+                    <p>Attention mechanisms in neural networks have shown improved results, with up to <span class="emphasis">17%</span> better performance by focusing on the most relevant parts of the input data. However, these visualizations remain difficult for non-experts to interpret. A heat map showing attention weights might be clear to a data scientist but confusing to an average homeowner.</p>
+                    
+                    <h3>Hybrid Architectures</h3>
+                    <p>Hybrid architectures that combine interpretable components with high-accuracy deep learning show promising direction but remain underdeveloped specifically in the energy domain. Most research in explainable AI has focused on computer vision or natural language processing, with less attention to time-series forecasting for energy.</p>
+                    
+                    <p>My research addresses this gap by developing explainability methods specifically designed for energy forecasting, integrating them directly into the model architecture rather than applying them as an afterthought. This approach ensures that explanations are both accurate and accessible to non-expert users.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Show a simple example of how a heat map might look vs. how your approach would translate this into more understandable terms. You could use your hands to illustrate the difference between a technical visualization and a user-friendly explanation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">9</div>
+                    <div class="slide-title">Key Limitations in Current Research</div>
+                </div>
+                <div class="slide-content">
+                    <p>To summarize the key limitations in current research:</p>
+                    
+                    <h3>1. Accuracy-Interpretability Trade-off</h3>
+                    <p>Most approaches sacrifice one for the other. Highly accurate models like deep neural networks are typically black boxes, while more interpretable models like decision trees often can't capture the complex patterns in energy consumption data.</p>
+                    
+                    <h3>2. Limited Adaptability</h3>
+                    <p>Most models require extensive retraining to adjust to changing consumption patterns. This is impractical for real-world applications where household behaviors evolve continuously.</p>
+                    
+                    <h3>3. Poor Generalization</h3>
+                    <p>Models don't transfer well between different households. A system trained on one family's data often performs poorly when applied to another household with different appliances and behaviors.</p>
+                    
+                    <h3>4. Computational Complexity</h3>
+                    <p>Many advanced models are too resource-intensive for practical use in home energy management systems, which typically have limited computational resources.</p>
+                    
+                    <p>PREDICT-HOME addresses these limitations directly through its novel architecture and approach. By integrating explainability from the ground up, implementing online learning for adaptation, and designing for cross-household transfer learning, my system aims to overcome these critical barriers to practical energy forecasting.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Use this slide to create a clear transition between the problem space and your solution. Emphasize that PREDICT-HOME was specifically designed to address each of these limitations, creating anticipation for your solution.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">10</div>
+                    <div class="slide-title">Project Vision</div>
+                </div>
+                <div class="slide-content">
+                    <p>The vision for PREDICT-HOME goes beyond just creating another forecasting algorithm. It envisions intelligent energy forecasting that empowers households to optimize consumption, reduce costs, and contribute to a more sustainable energy system.</p>
+                    
+                    <p>The key to this empowerment is providing not just predictions, but understanding. By delivering accurate predictions with clear explanations, the system enables users to comprehend:</p>
+                    
+                    <ul>
+                        <li><span class="emphasis">What</span> their future consumption will be—giving them concrete numbers and time frames for expected energy usage.</li>
+                        <li><span class="emphasis">Why</span> certain patterns emerge in their usage—identifying factors like weather conditions, occupancy patterns, or specific appliance usage that drive consumption.</li>
+                        <li><span class="emphasis">How</span> their consumption patterns can be modified—offering actionable insights that enable users to make informed decisions about when and how they use energy.</li>
+                    </ul>
+                    
+                    <p>This approach transforms energy forecasting from a purely technical exercise into a tool for household empowerment. By understanding their energy usage patterns and the factors that influence them, users can take control of their consumption in ways that weren't previously possible.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Speak with passion when describing the vision, as this is the heart of your research motivation. Emphasize the What-Why-How framework with hand gestures to help the audience remember these three key elements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">11</div>
+                    <div class="slide-title">Project Objectives</div>
+                </div>
+                <div class="slide-content">
+                    <p>To realize this vision, I've defined five specific, measurable objectives:</p>
+                    
+                    <h3>1. Design a hybrid CNN-LSTM neural network with attention mechanisms</h3>
+                    <p>The convolutional components will capture local patterns in energy usage, while the LSTM components will model long-term dependencies. Attention mechanisms will help the model focus on the most relevant time periods. This architecture aims to achieve a <span class="emphasis">15%</span> accuracy improvement over baseline models.</p>
+                    
+                    <h3>2. Develop an integrated explainability framework</h3>
+                    <p>Using SHAP values to quantify the importance of different features and attention visualization to highlight which time periods most influenced the prediction. This isn't a post-hoc explanation but an integral part of the model's architecture.</p>
+                    
+                    <h3>3. Implement an online learning mechanism</h3>
+                    <p>That allows the model to adapt to changing consumption patterns without complete retraining. This is crucial for real-world applications where household behaviors evolve continuously.</p>
+                    
+                    <h3>4. Create a specialized peak demand prediction component</h3>
+                    <p>With at least <span class="emphasis">85%</span> precision and recall for high-consumption periods. This is particularly important for grid management and for households on time-of-use tariffs where energy costs more during peak times.</p>
+                    
+                    <h3>5. Develop an interactive visualization dashboard</h3>
+                    <p>That presents forecasts, explanations, and uncertainty estimates in an intuitive way. This ensures that the technical sophistication of the model translates into practical value for users.</p>
+                    
+                    <p>These objectives collectively address the limitations identified in current research while aligning with the overall vision of empowering households through energy understanding.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Count off each objective on your fingers as you present them, helping the audience track the five distinct components. Emphasize that these are not just design goals but measurable objectives with specific performance targets.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">12</div>
+                    <div class="slide-title">System Architecture</div>
+                </div>
+                <div class="slide-content">
+                    <p>PREDICT-HOME's architecture consists of four integrated layers, each serving a distinct purpose:</p>
+                    
+                    <h3>1. Data Processing Layer</h3>
+                    <p>Handles smart meter data preprocessing and feature engineering. This includes cleaning raw data, handling missing values, normalizing inputs, and creating derived features that capture temporal patterns like day of week, season, and holidays. This layer ensures that the data fed into the model is high-quality and information-rich.</p>
+                    
+                    <h3>2. Modeling Layer</h3>
+                    <p>Contains three key components: the hybrid CNN-LSTM with attention mechanisms for accurate forecasting, the online learning component that allows the model to adapt to changing patterns, and the peak demand prediction module that specializes in identifying high-consumption periods.</p>
+                    
+                    <h3>3. Explainability Layer</h3>
+                    <p>Includes SHAP implementation for feature importance, attention visualization that shows which time periods most influenced the prediction, and a natural language explanation generator that translates technical insights into user-friendly text. This layer ensures that users can understand and trust the system's predictions.</p>
+                    
+                    <h3>4. User Interface Layer</h3>
+                    <p>Provides an interactive dashboard for visualizations and insights, shows forecasts with prediction intervals to communicate uncertainty, and visualizes performance metrics so users can assess the system's reliability.</p>
+                    
+                    <p>This layered architecture ensures modularity and maintainability, allowing each component to be developed, tested, and refined independently while working together as an integrated system.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Use a stacking gesture with your hands to illustrate the layered architecture. Emphasize how data flows through these layers from raw input to user-friendly output, creating a complete pipeline.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">13</div>
+                    <div class="slide-title">Key Components</div>
+                </div>
+                <div class="slide-content">
+                    <p>Let me elaborate on the three key components that form the technical core of PREDICT-HOME:</p>
+                    
+                    <h3>1. Hybrid CNN-LSTM Architecture</h3>
+                    <p>Leverages the strengths of both convolutional and recurrent neural networks. CNNs excel at capturing local patterns in consumption data, identifying usage signatures of specific appliances or activities. LSTMs excel at modeling long-term temporal dependencies, tracking patterns that span hours, days, or weeks. Attention mechanisms enhance both by focusing on the most relevant time steps for prediction. Together, these elements aim for a Mean Absolute Percentage Error (MAPE) of <span class="emphasis">10% or less</span> for 24-hour forecasts—a substantial improvement over current approaches.</p>
+                    
+                    <h3>2. Explainability Framework</h3>
+                    <p>Works on multiple levels: feature importance quantification using SHAP values helps users understand which factors (weather, time of day, previous usage) most influenced the prediction; temporal importance via attention visualization highlights which specific time periods had the greatest impact; and comprehensive user testing ensures that these explanations are actually meaningful to non-expert users.</p>
+                    
+                    <h3>3. Online Learning & Adaptability</h3>
+                    <p>Provides incremental model updates with new data, allowing the system to continuously learn without full retraining. It includes concept drift detection mechanisms that can identify when consumption patterns have significantly changed, triggering more substantial model updates. The goal is to recover accuracy within <span class="emphasis">48 hours</span> after pattern changes—much faster than traditional approaches that might require weeks of new data.</p>
+                    
+                    <p>These components work together to create a system that is not only accurate but also explainable and adaptable—addressing the key limitations of current energy forecasting approaches.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>This is a highly technical slide where you may lose non-technical audience members. Consider using a simple analogy for each component: CNN-LSTM as "pattern recognition at different time scales," explainability as "translation from machine language to human language," and online learning as "continuous adaptation without starting over."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">14</div>
+                    <div class="slide-title">Project Timelines</div>
+                </div>
+                <div class="slide-content">
+                    <p>The project follows a comprehensive 10-week timeline, with each phase building on the previous ones:</p>
+                    
+                    <h3>Weeks 1-2: Foundation</h3>
+                    <p>Focus on foundational work: conducting a thorough literature review to ensure my approach builds on and extends current knowledge; collecting and processing data from smart meter datasets; and performing feature engineering to create meaningful inputs for the model.</p>
+                    
+                    <h3>Weeks 3-5: Core Modeling</h3>
+                    <p>Cover the core modeling work: developing baseline models for benchmarking; designing the CNN-LSTM hybrid architecture; and implementing attention mechanisms to enhance both accuracy and explainability.</p>
+                    
+                    <h3>Weeks 6-8: Advanced Components</h3>
+                    <p>Develop the advanced components: creating the explainability framework that makes predictions interpretable; implementing the online learning component for adaptability; and refining the peak demand prediction module.</p>
+                    
+                    <h3>Weeks 9-10: Integration and Evaluation</h3>
+                    <p>Complete the project: integrating all components into a cohesive system; developing the dashboard for user interaction; and conducting final evaluation against both technical metrics and user experience measures.</p>
+                    
+                    <p>Key milestones are distributed throughout this timeline to ensure steady progress and timely completion. Each milestone has specific deliverables that will be reviewed to confirm the project is on track.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Use a timeline gesture with your hand moving from left to right as you describe the progression. When discussing milestones, emphasize that they serve as quality checkpoints, not just deadline markers.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">15</div>
+                    <div class="slide-title">Key Deliverables by Milestone</div>
+                </div>
+                <div class="slide-content">
+                    <p>Each milestone in the project has specific, tangible deliverables:</p>
+                    
+                    <h3>Milestone 1: Project Initiation (Week 1)</h3>
+                    <p>I'll produce a comprehensive project plan with clearly defined scope boundaries to prevent scope creep, a structured literature review outline identifying key papers and approaches, and dataset identification documenting the sources and characteristics of the data I'll use.</p>
+                    
+                    <h3>Milestone 3: Feature Engineering (Week 3)</h3>
+                    <p>Deliverables include a feature selection report documenting which variables will be used and why, a feature importance analysis showing which factors most influence energy consumption, and a data preprocessing pipeline that transforms raw smart meter data into model-ready inputs.</p>
+                    
+                    <h3>Milestone 5: Draft Thesis & CNN-LSTM Design (Week 5)</h3>
+                    <p>I'll submit the draft thesis capturing research progress to date, a detailed CNN-LSTM architecture specification including layer configurations and hyperparameters, and an implementation plan for translating the design into code.</p>
+                    
+                    <h3>Milestone 7: Explainability Framework (Week 7)</h3>
+                    <p>I'll deliver the SHAP value implementation that quantifies feature importance, an attention visualization component that illustrates temporal importance, and an explainability evaluation report documenting how users interpret and respond to these explanations.</p>
+                    
+                    <h3>Milestone 10: Final Deliverable (Week 10)</h3>
+                    <p>I'll produce the complete PREDICT-HOME system integrating all components, the final dashboard implementation for user interaction, and the final thesis draft documenting the entire research project.</p>
+                    
+                    <p>All deliverables are aligned with academic deadlines, with the draft thesis due July 14 and the final thesis due September 1. This ensures the project remains academically rigorous while delivering practical value.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Briefly highlight one key deliverable from each milestone rather than reading the full list. This keeps the audience engaged while conveying the structured nature of your approach.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">16</div>
+                    <div class="slide-title">Risk Assessment and Mitigation</div>
+                </div>
+                <div class="slide-content">
+                    <p>I've identified five key risks that could impact the project's success and developed mitigation strategies for each:</p>
+                    
+                    <h3>Data Quality Issues (High Impact, Medium Likelihood)</h3>
+                    <p>Smart meter data often contains gaps, errors, or inconsistencies. I'll mitigate this by focusing on the UK-DALE dataset, which is well-documented and validated. I'll also implement a robust preprocessing pipeline with outlier detection to identify and handle problematic data points before they affect model training.</p>
+                    
+                    <h3>Computational Complexity (High Impact, Medium Likelihood)</h3>
+                    <p>Deep learning models, especially hybrids, can be computationally intensive. I'll address this through model pruning and optimization techniques, establishing clear performance budgets for training and inference times, and using progressive refinement approaches that start with simpler models and add complexity incrementally.</p>
+                    
+                    <h3>Explainability-Accuracy Trade-off (Medium Impact, Medium Likelihood)</h3>
+                    <p>Enhancing explainability might compromise predictive performance. I'll manage this through multi-objective optimization that explicitly balances these competing goals and ensemble approaches that combine highly accurate components with more interpretable ones.</p>
+                    
+                    <h3>Concept Drift Detection Reliability (Medium Impact, High Likelihood)</h3>
+                    <p>Detecting when consumption patterns have changed is challenging but essential for adaptation. I'll implement multiple complementary drift detection mechanisms and validate them on synthetic data with controlled pattern changes to ensure reliability.</p>
+                    
+                    <h3>Limited Generalization (High Impact, Medium Likelihood)</h3>
+                    <p>I'll address this by using diverse training datasets representing different household types, implementing household clustering to group similar homes, and developing transfer learning techniques that adapt pre-trained models to new households with minimal additional data.</p>
+                    
+                    <p>Each risk will be continuously monitored throughout the project lifecycle, with mitigation strategies adjusted based on actual progress and challenges encountered. This proactive approach to risk management increases the likelihood of project success despite the technical challenges involved.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>The risk assessment demonstrates your thorough planning and foresight. Emphasize that identifying risks early allows for proactive rather than reactive management. Consider using a brief example of how one risk was identified through preliminary research.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">17</div>
+                    <div class="slide-title">Beyond the Project: Future Impact</div>
+                </div>
+                <div class="slide-content">
+                    <p>The potential impact of this work extends far beyond the immediate academic deliverables:</p>
+                    
+                    <h3>Academic Contributions</h3>
+                    <ul>
+                        <li>Novel approach to balancing accuracy and explainability in deep learning</li>
+                        <li>New insights into how attention mechanisms can be applied specifically to energy forecasting problems</li>
+                        <li>Effective online learning techniques for consumer-level applications where data arrives continuously but patterns change irregularly</li>
+                    </ul>
+                    
+                    <h3>Practical Applications</h3>
+                    <ul>
+                        <li>Integration with home energy management systems to automate consumption optimization</li>
+                        <li>Support for time-of-use tariff optimization, helping households save money by shifting usage to lower-cost periods</li>
+                        <li>Foundation for demand-side management programs that utilities can use to reduce peak loads</li>
+                        <li>Potential annual savings of <span class="emphasis">£3.8 billion</span> for UK households alone</li>
+                    </ul>
+                    
+                    <h3>Environmental Impact</h3>
+                    <ul>
+                        <li>More efficient energy use means reduced carbon emissions across the residential sector</li>
+                        <li>Better prediction enables improved integration of renewable energy sources, which often have variable output</li>
+                        <li>These efficiencies support the broader transition to a more sustainable energy system with reduced dependence on fossil fuels</li>
+                    </ul>
+                    
+                    <p>These diverse impacts demonstrate that PREDICT-HOME isn't just an academic exercise but a stepping stone toward meaningful improvements in how households consume energy and how our energy system functions as a whole.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>This is your opportunity to inspire the audience about the broader relevance of your work. Speak with conviction about the potential real-world impact, particularly the environmental benefits. Connect back to the global energy challenge from the beginning to create a cohesive narrative arc.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-section">
+                <div class="slide-header">
+                    <div class="slide-number">18</div>
+                    <div class="slide-title">Thank You / Questions</div>
+                </div>
+                <div class="slide-content">
+                    <p>Thank you for your attention throughout this presentation. I've outlined how PREDICT-HOME addresses critical challenges in energy forecasting by combining advanced deep learning techniques with explainability and adaptability.</p>
+                    
+                    <p>I believe this research makes several key contributions to the field: it advances the state of the art in explainable energy forecasting, introduces novel technical approaches to balance accuracy with interpretability, and creates a practical system that could have significant economic and environmental benefits.</p>
+                    
+                    <p>I'd now be happy to answer any questions you might have about:</p>
+                    <ul>
+                        <li>The technical architecture and how different components interact</li>
+                        <li>The explainability framework and how it makes predictions interpretable</li>
+                        <li>The validation methodology and performance metrics</li>
+                        <li>The practical applications and potential impact</li>
+                        <li>Future directions for research building on this work</li>
+                    </ul>
+                    
+                    <p>Your questions and feedback are valuable not only for this defense but also for refining the final system and thesis document. Thank you.</p>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">Speaker Note</div>
+                        <p>Express genuine appreciation for the committee's time and attention. Maintain confident body language and make eye contact with each committee member. Have a few anticipated questions prepared in advance with thoughtful answers. If you don't know an answer, acknowledge the limitation and suggest how you might approach finding that answer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>PREDICT-HOME: An Explainable Hybrid Deep Learning System for Adaptive Domestic Energy Forecasting</p>
+            <p>Thesis Defense Speaker Notes • Hisham • 28-4-2025</p>
+        </div>
+    </div>
+</body>
+</html>
